@@ -5,6 +5,9 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import KeyboardShortcuts from "@/components/ui/KeyboardShortcuts";
+import JsonLd from "@/components/seo/JsonLd";
 import { fontVariables } from "../layout";
 
 export function generateStaticParams() {
@@ -31,9 +34,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className={fontVariables}>
+      <head>
+        <JsonLd />
+      </head>
       <body className="antialiased min-h-screen flex flex-col">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            <ScrollProgress />
+            <KeyboardShortcuts />
             <a href="#main-content" className="skip-to-content">
               Skip to content
             </a>

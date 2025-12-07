@@ -179,3 +179,126 @@ body {
   transform: translateX(-50%);
   top: 0;
 }
+
+/* Print Styles */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  .dark {
+    --background: #ffffff;
+    --foreground: #000000;
+    --muted-foreground: #333333;
+    --border: #cccccc;
+  }
+
+  header,
+  footer,
+  .skip-to-content,
+  button,
+  .btn-primary,
+  nav,
+  [aria-label="Back to top"],
+  [aria-label="Toggle theme"],
+  [aria-label="Toggle menu"] {
+    display: none !important;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    padding: 2rem 0;
+  }
+
+  .glass {
+    background: white !important;
+    backdrop-filter: none !important;
+    border: 1px solid #cccccc !important;
+  }
+
+  .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: black !important;
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .card-hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border: 1px solid #cccccc;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666666;
+  }
+
+  a[href^="#"]:after,
+  a[href^="mailto"]:after,
+  a[href^="javascript"]:after {
+    content: "";
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .container-custom {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* Hide mobile menu, scroll progress, and other interactive elements */
+  [class*="motion"],
+  [class*="animate"] {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Show all content, no "show more" buttons */
+  .grid {
+    display: block !important;
+  }
+
+  .grid > * {
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+
+  /* Social links - just show as text */
+  .flex.items-center.gap-4 a {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  @page :first {
+    margin-top: 1cm;
+  }
+}

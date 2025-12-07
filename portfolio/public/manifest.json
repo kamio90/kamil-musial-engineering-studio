@@ -1,0 +1,43 @@
+{
+  "name": "Kamil Musiał Engineering Studio",
+  "short_name": "KM Studio",
+  "description": "Portfolio of Kamil Musiał - Senior Software Engineer with 9+ years of experience",
+  "start_url": "/kamil-musial-engineering-studio/pl",
+  "scope": "/kamil-musial-engineering-studio/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "categories": ["portfolio", "technology", "business"],
+  "icons": [
+    {
+      "src": "/kamil-musial-engineering-studio/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/kamil-musial-engineering-studio/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/kamil-musial-engineering-studio/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Portfolio Homepage"
+    },
+    {
+      "src": "/kamil-musial-engineering-studio/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Portfolio Mobile"
+    }
+  ],
+  "prefer_related_applications": false
+}

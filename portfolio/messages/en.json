@@ -73,7 +73,19 @@
     },
     "viewProject": "View Project",
     "viewCode": "View Code",
-    "techStack": "Tech Stack"
+    "techStack": "Tech Stack",
+    "filters": {
+      "search": "Search projects...",
+      "year": "Year",
+      "allYears": "All Years",
+      "tech": "Technology",
+      "allTech": "All Technologies",
+      "clearFilters": "Clear filters",
+      "noResults": "No projects match your filters",
+      "results": "projects found",
+      "showMore": "Show All",
+      "showLess": "Show Less"
+    }
   },
   "achievements": {
     "title": "Achievements",

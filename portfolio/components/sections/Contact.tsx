@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const socialLinks = [
   { name: "GitHub", url: "https://github.com/kamio90", icon: Github },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/kamil-musial-engineer/", icon: Linkedin },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/kamio90/", icon: Linkedin },
 ];
 
 export default function Contact() {

@@ -19,8 +19,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: t("email"),
-      value: "contact@kamilmusial.dev",
-      href: "mailto:contact@kamilmusial.dev",
+      value: "kmusial40@gmail.com",
+      href: "mailto:kmusial40@gmail.com",
     },
     {
       icon: MapPin,

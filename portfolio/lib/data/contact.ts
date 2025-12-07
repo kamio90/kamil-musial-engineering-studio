@@ -17,13 +17,13 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "Email",
-    url: "mailto:contact@kamilmusial.dev",
+    url: "mailto:kmusial40@gmail.com",
     icon: "mail",
   },
 ];
 
 export const contactInfo = {
-  email: "contact@kamilmusial.dev",
+  email: "kmusial40@gmail.com",
   location: {
     pl: "Kraków, Polska",
     en: "Krakow, Poland",

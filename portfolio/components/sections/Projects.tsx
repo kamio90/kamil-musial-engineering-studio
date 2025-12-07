@@ -359,7 +359,7 @@ export default function Projects() {
                       {project.year}
                     </span>
 
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                    <p className="text-muted-foreground text-sm mb-4">
                       {project.description[locale]}
                     </p>
 

@@ -12,7 +12,7 @@ export default function JsonLd() {
       "Senior Software Engineer with 9+ years of experience building scalable applications",
     url: siteUrl,
     image: `${siteUrl}/logo.svg`,
-    email: "contact@kamilmusial.dev",
+    email: "kmusial40@gmail.com",
     jobTitle: "Senior Software Engineer",
     worksFor: {
       "@type": "Organization",

@@ -41,7 +41,7 @@ export default function Achievements() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {achievements.map((achievement, index) => {
             const Icon = iconMap[achievement.icon];
             return (
@@ -51,22 +51,20 @@ export default function Achievements() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="glass rounded-xl p-5 card-hover group"
+                className="glass rounded-xl p-5 card-hover group flex flex-col"
               >
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 flex-1">
                   <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors shrink-0">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    {achievement.metric && (
-                      <span className="text-2xl font-bold gradient-text">
-                        {achievement.metric}
-                      </span>
-                    )}
-                    <h3 className="font-semibold text-sm mt-1 group-hover:text-primary transition-colors">
+                    <span className="text-2xl font-bold gradient-text block h-8">
+                      {achievement.metric || ""}
+                    </span>
+                    <h3 className="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-2">
                       {achievement.title[locale]}
                     </h3>
-                    <p className="text-muted-foreground text-xs mt-1 line-clamp-2">
+                    <p className="text-muted-foreground text-xs mt-2">
                       {achievement.description[locale]}
                     </p>
                   </div>

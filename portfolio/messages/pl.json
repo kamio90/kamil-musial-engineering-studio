@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "title": "Kamil Musiał | Senior Software Engineer",
+    "description": "Portfolio Kamila Musiała - Senior Software Engineer z 9+ letnim doświadczeniem w TypeScript, React, Node.js i architekturze chmurowej"
+  },
+  "nav": {
+    "about": "O mnie",
+    "skills": "Umiejętności",
+    "experience": "Doświadczenie",
+    "projects": "Projekty",
+    "education": "Edukacja",
+    "contact": "Kontakt",
+    "downloadCV": "Pobierz CV",
+    "language": "EN"
+  },
+  "hero": {
+    "greeting": "Cześć, jestem",
+    "name": "Kamil Musiał",
+    "title": "Senior Software Engineer",
+    "subtitle": "Buduję skalowalne rozwiązania z pasją do czystego kodu",
+    "cta": {
+      "primary": "Zobacz projekty",
+      "secondary": "Skontaktuj się"
+    },
+    "scrollDown": "Przewiń w dół"
+  },
+  "stats": {
+    "yearsExperience": "Lat doświadczenia",
+    "projectsDelivered": "Zrealizowanych projektów",
+    "companiesWorked": "Firm współpracujących",
+    "fasterSystem": "Szybszy system"
+  },
+  "about": {
+    "title": "O mnie",
+    "subtitle": "Poznaj mnie bliżej",
+    "description": "Senior Software Engineer z ponad 9-letnim doświadczeniem w budowaniu skalowalnych aplikacji webowych. Specjalizuję się w TypeScript, React, Node.js oraz architekturze chmurowej. Łączę głęboką wiedzę techniczną z umiejętnościami przywódczymi, prowadząc zespoły i wdrażając najlepsze praktyki inżynierskie.",
+    "highlights": {
+      "fullStack": "Full Stack Development",
+      "architecture": "Architektura systemów",
+      "leadership": "Przywództwo techniczne",
+      "cloud": "Rozwiązania chmurowe"
+    }
+  },
+  "skills": {
+    "title": "Umiejętności",
+    "subtitle": "Technologie i narzędzia",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "databases": "Bazy danych",
+      "architecture": "Architektura",
+      "tools": "Narzędzia & Metodologie"
+    }
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "subtitle": "Moja ścieżka kariery",
+    "present": "Obecnie",
+    "viewMore": "Zobacz więcej",
+    "achievements": "Osiągnięcia"
+  },
+  "projects": {
+    "title": "Projekty",
+    "subtitle": "Wybrane realizacje",
+    "categories": {
+      "all": "Wszystkie",
+      "commercial": "Komercyjne",
+      "competition": "Konkursowe",
+      "university": "Uczelniane",
+      "private": "Prywatne",
+      "company": "Firmowe"
+    },
+    "viewProject": "Zobacz projekt",
+    "viewCode": "Zobacz kod",
+    "techStack": "Technologie"
+  },
+  "achievements": {
+    "title": "Osiągnięcia",
+    "subtitle": "Kluczowe sukcesy"
+  },
+  "education": {
+    "title": "Edukacja",
+    "subtitle": "Wykształcenie i certyfikaty",
+    "certifications": "Certyfikaty"
+  },
+  "conferences": {
+    "title": "Konferencje",
+    "subtitle": "Wydarzenia i networking"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Porozmawiajmy",
+    "description": "Jestem otwarty na nowe możliwości współpracy. Skontaktuj się ze mną, aby omówić Twój projekt lub po prostu się przywitać.",
+    "email": "Email",
+    "location": "Lokalizacja",
+    "availability": "Dostępność",
+    "availableText": "Dostępny dla nowych projektów",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "message": "Wiadomość",
+      "send": "Wyślij wiadomość"
+    },
+    "social": "Media społecznościowe"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone",
+    "builtWith": "Zbudowane z",
+    "and": "i"
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Wystąpił błąd",
+    "close": "Zamknij",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "readMore": "Czytaj więcej",
+    "showLess": "Pokaż mniej"
+  }
+}

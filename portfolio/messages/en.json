@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "title": "Kamil Musiał | Senior Software Engineer",
+    "description": "Kamil Musiał's Portfolio - Senior Software Engineer with 9+ years of experience in TypeScript, React, Node.js, and cloud architecture"
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "downloadCV": "Download CV",
+    "language": "PL"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Kamil Musiał",
+    "title": "Senior Software Engineer",
+    "subtitle": "Building scalable solutions with a passion for clean code",
+    "cta": {
+      "primary": "View Projects",
+      "secondary": "Get in Touch"
+    },
+    "scrollDown": "Scroll down"
+  },
+  "stats": {
+    "yearsExperience": "Years of Experience",
+    "projectsDelivered": "Projects Delivered",
+    "companiesWorked": "Companies Worked With",
+    "fasterSystem": "Faster System"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me",
+    "description": "Senior Software Engineer with over 9 years of experience building scalable web applications. I specialize in TypeScript, React, Node.js, and cloud architecture. I combine deep technical expertise with leadership skills, leading teams and implementing best engineering practices.",
+    "highlights": {
+      "fullStack": "Full Stack Development",
+      "architecture": "System Architecture",
+      "leadership": "Technical Leadership",
+      "cloud": "Cloud Solutions"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "databases": "Databases",
+      "architecture": "Architecture",
+      "tools": "Tools & Methodologies"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My career path",
+    "present": "Present",
+    "viewMore": "View more",
+    "achievements": "Achievements"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected work",
+    "categories": {
+      "all": "All",
+      "commercial": "Commercial",
+      "competition": "Competition",
+      "university": "University",
+      "private": "Private",
+      "company": "Company"
+    },
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "techStack": "Tech Stack"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "subtitle": "Key accomplishments"
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "Education and certifications",
+    "certifications": "Certifications"
+  },
+  "conferences": {
+    "title": "Conferences",
+    "subtitle": "Events and networking"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk",
+    "description": "I'm open to new collaboration opportunities. Get in touch to discuss your project or just say hello.",
+    "email": "Email",
+    "location": "Location",
+    "availability": "Availability",
+    "availableText": "Available for new projects",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "social": "Social Media"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "builtWith": "Built with",
+    "and": "and"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "readMore": "Read more",
+    "showLess": "Show less"
+  }
+}

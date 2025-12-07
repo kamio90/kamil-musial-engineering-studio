@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Clock, Github, Linkedin, Send } from "lucide-react";
 import Link from "next/link";
+import CopyButton from "@/components/ui/CopyButton";
 
 const socialLinks = [
   { name: "GitHub", url: "https://github.com/kamio90", icon: Github },
@@ -69,12 +70,17 @@ export default function Contact() {
                     <div>
                       <p className="text-sm text-muted-foreground">{item.label}</p>
                       {item.href ? (
-                        <Link
-                          href={item.href}
-                          className="font-medium hover:text-primary transition-colors"
-                        >
-                          {item.value}
-                        </Link>
+                        <div className="flex items-center gap-2">
+                          <Link
+                            href={item.href}
+                            className="font-medium hover:text-primary transition-colors"
+                          >
+                            {item.value}
+                          </Link>
+                          {item.href.startsWith("mailto:") && (
+                            <CopyButton text={item.value} />
+                          )}
+                        </div>
                       ) : (
                         <p className="font-medium">{item.value}</p>
                       )}

@@ -14,7 +14,33 @@ export interface Conference {
 
 export const conferences: Conference[] = [
   {
-    name: "Code Europe",
+    name: "Code Europe 2024",
+    role: {
+      pl: "Uczestnik",
+      en: "Attendee",
+    },
+    year: "2024",
+    location: "Kraków",
+    description: {
+      pl: "Największa konferencja programistyczna w Polsce - najnowsze trendy w IT",
+      en: "Largest programming conference in Poland - latest IT trends",
+    },
+  },
+  {
+    name: "HackYeah 2023",
+    role: {
+      pl: "Zwycięzca - 1. miejsce",
+      en: "Winner - 1st Place",
+    },
+    year: "2023",
+    location: "Kraków",
+    description: {
+      pl: "Największy hackathon w Europie - zwycięstwo z projektem CIRCLE EDGE",
+      en: "Europe's largest hackathon - victory with CIRCLE EDGE project",
+    },
+  },
+  {
+    name: "Code Europe 2023",
     role: {
       pl: "Uczestnik",
       en: "Attendee",
@@ -22,25 +48,12 @@ export const conferences: Conference[] = [
     year: "2023",
     location: "Kraków",
     description: {
-      pl: "Największa konferencja programistyczna w Polsce - networking i najnowsze trendy w IT",
-      en: "Largest programming conference in Poland - networking and latest IT trends",
+      pl: "Konferencja programistyczna - networking i najnowsze trendy",
+      en: "Programming conference - networking and latest trends",
     },
   },
   {
-    name: "Tech Open X",
-    role: {
-      pl: "Uczestnik",
-      en: "Attendee",
-    },
-    year: "2023",
-    location: "Kraków",
-    description: {
-      pl: "Konferencja technologiczna skupiona na innowacjach i nowych technologiach",
-      en: "Technology conference focused on innovations and emerging technologies",
-    },
-  },
-  {
-    name: "RevDev",
+    name: "Code Europe 2022",
     role: {
       pl: "Uczestnik",
       en: "Attendee",
@@ -48,21 +61,47 @@ export const conferences: Conference[] = [
     year: "2022",
     location: "Kraków",
     description: {
-      pl: "Konferencja dla programistów skupiona na rozwoju kariery i najlepszych praktykach",
-      en: "Developer conference focused on career development and best practices",
+      pl: "Konferencja programistyczna z naciskiem na architekturę i cloud",
+      en: "Programming conference focused on architecture and cloud",
     },
   },
   {
-    name: "LegalHack 2020",
+    name: "NASA Space Apps Challenge 2022",
     role: {
-      pl: "Zwycięzca - 1. miejsce",
-      en: "Winner - 1st Place",
+      pl: "Uczestnik",
+      en: "Participant",
     },
-    year: "2020",
+    year: "2022",
     location: "Online",
     description: {
-      pl: "Hackathon prawniczy - zwycięstwo z aplikacją wykorzystującą Computer Vision i AI",
-      en: "Legal hackathon - victory with application using Computer Vision and AI",
+      pl: "Globalny hackathon NASA - stworzenie aplikacji ISS Lookout",
+      en: "Global NASA hackathon - created ISS Lookout application",
+    },
+  },
+  {
+    name: "Tech Open X 2022",
+    role: {
+      pl: "Uczestnik",
+      en: "Attendee",
+    },
+    year: "2022",
+    location: "Kraków",
+    description: {
+      pl: "Konferencja technologiczna skupiona na innowacjach",
+      en: "Technology conference focused on innovations",
+    },
+  },
+  {
+    name: "RevDev 2022",
+    role: {
+      pl: "Uczestnik",
+      en: "Attendee",
+    },
+    year: "2022",
+    location: "Kraków",
+    description: {
+      pl: "Konferencja dla programistów o rozwoju kariery",
+      en: "Developer conference about career development",
     },
   },
 ];

@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kamil Musiał Engineering Studio - Portfolio
 
-## Getting Started
+Personal portfolio website showcasing 9+ years of software engineering experience.
 
-First, run the development server:
+## 🚀 Deployment to GitHub Pages
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Setup
+1. Create GitHub repository: `kamil-musial-engineering-studio`
+2. Push code to `main` branch
+3. Go to Settings → Pages
+4. Source: **GitHub Actions** (not branch)
+5. GitHub Actions will auto-deploy
+
+### Important Configuration
+Update `basePath` in `next.config.ts` if using different repo name:
+```typescript
+basePath: '/your-repo-name'  // Match your repo name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Access
+- **Production**: https://kamio90.github.io/kamil-musial-engineering-studio
+- **Dev**: `npm run dev` → http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build Locally
+```bash
+npm install
+npm run build  # Generates /out folder
+npx serve@latest out  # Test static export
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Framework**: Next.js 16 (Static Export)
+- **Language**: TypeScript
+- **Styling**: TailwindCSS v4
+- **Animations**: Framer Motion
+- **i18n**: next-intl (PL/EN)
+- **Fonts**: Geist Sans + Geist Mono
+- **Icons**: Lucide React
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+portfolio/
+├── app/
+│   ├── [locale]/        # i18n routing
+│   │   ├── layout.tsx   # Locale layout
+│   │   └── page.tsx     # Main page
+│   ├── globals.css      # Global styles
+│   └── layout.tsx       # Root layout
+├── components/
+│   ├── providers/       # Theme provider
+│   └── sections/        # Page sections
+├── lib/data/            # CV data as TypeScript
+├── messages/            # Translations (pl.json, en.json)
+├── i18n/                # next-intl config
+└── public/              # Static assets
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Content Updates
 
-## Deploy on Vercel
+Edit data files in `lib/data/*.ts` to update:
+- `experience.ts` - Work history (7 companies)
+- `projects.ts` - Portfolio projects (30+)
+- `achievements.ts` - Key accomplishments
+- `skills.ts` - Technical skills
+- `education.ts` - Degrees & certifications
+- `conferences.ts` - Events & hackathons
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ✅ Dark/Light theme toggle
+- ✅ PL/EN language switch
+- ✅ Responsive design (mobile-first)
+- ✅ Animated sections (Framer Motion)
+- ✅ Counter animations for stats
+- ✅ Filterable project grid
+- ✅ Timeline experience view
+- ✅ Glass morphism UI
+- ✅ Downloadable CV
+
+## 🏆 Highlights
+
+- **1st Place** - HackYeah 2023 (Europe's largest hackathon)
+- **9+ years** - Full-stack development
+- **30+ projects** - Commercial, competition, private
+- **1M+ users** - Scaled systems
+- **MBA** - Business Administration
+
+## 📜 License
+
+© 2024 Kamil Musiał. All rights reserved.

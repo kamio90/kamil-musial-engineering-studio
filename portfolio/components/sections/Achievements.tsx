@@ -1,8 +1,8 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { Trophy, Star, Zap, Target, TrendingUp, Award } from "lucide-react";
+import { Trophy, Star, Zap, Target, TrendingUp, Award, Rocket, Users, Code, Shield } from "lucide-react";
 import { achievements } from "@/lib/data/achievements";
 
 const iconMap = {
@@ -12,10 +12,13 @@ const iconMap = {
   target: Target,
   "trending-up": TrendingUp,
   award: Award,
+  rocket: Rocket,
+  users: Users,
+  code: Code,
+  shield: Shield,
 };
 
 export default function Achievements() {
-  const t = useTranslations("achievements");
   const locale = useLocale() as "pl" | "en";
 
   return (
@@ -29,12 +32,16 @@ export default function Achievements() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">{t("title")}</span>
+            <span className="gradient-text">
+              {locale === "pl" ? "Osiągnięcia" : "Achievements"}
+            </span>
           </h2>
-          <p className="text-muted-foreground">{t("subtitle")}</p>
+          <p className="text-muted-foreground">
+            {locale === "pl" ? "Kluczowe sukcesy i wyniki" : "Key accomplishments and results"}
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {achievements.map((achievement, index) => {
             const Icon = iconMap[achievement.icon];
             return (
@@ -42,24 +49,24 @@ export default function Achievements() {
                 key={achievement.title.en}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="glass rounded-xl p-6 card-hover group"
+                className="glass rounded-xl p-5 card-hover group"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors shrink-0">
+                    <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     {achievement.metric && (
-                      <span className="text-3xl font-bold gradient-text">
+                      <span className="text-2xl font-bold gradient-text">
                         {achievement.metric}
                       </span>
                     )}
-                    <h3 className="font-semibold text-lg mt-1 group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-sm mt-1 group-hover:text-primary transition-colors">
                       {achievement.title[locale]}
                     </h3>
-                    <p className="text-muted-foreground text-sm mt-2">
+                    <p className="text-muted-foreground text-xs mt-1 line-clamp-2">
                       {achievement.description[locale]}
                     </p>
                   </div>

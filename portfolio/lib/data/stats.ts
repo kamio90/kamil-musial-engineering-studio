@@ -17,26 +17,43 @@ export const stats: Stat[] = [
     suffix: "+",
   },
   {
-    value: "24",
+    value: "30",
     label: {
-      pl: "Zrealizowanych projektów",
+      pl: "Dostarczonych projektów",
       en: "Projects Delivered",
     },
     suffix: "+",
   },
   {
-    value: "7",
+    value: "1",
     label: {
-      pl: "Firm współpracujących",
-      en: "Companies Worked With",
+      pl: "Użytkowników skalowanych",
+      en: "Users Scaled",
     },
+    suffix: "M+",
   },
   {
-    value: "300",
+    value: "99.99",
     label: {
-      pl: "Szybszy system",
-      en: "Faster System",
+      pl: "SLA Uptime",
+      en: "SLA Uptime",
     },
     suffix: "%",
+  },
+  {
+    value: "45",
+    label: {
+      pl: "Redukcja kosztów",
+      en: "Cost Reduction",
+    },
+    suffix: "%",
+  },
+  {
+    value: "12",
+    label: {
+      pl: "Mentorowanych inżynierów",
+      en: "Engineers Mentored",
+    },
+    suffix: "+",
   },
 ];

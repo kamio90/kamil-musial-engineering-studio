@@ -14,41 +14,74 @@ export interface Education {
     en: string;
   };
   location?: string;
+  details?: {
+    pl: string[];
+    en: string[];
+  };
 }
 
 export const education: Education[] = [
   {
-    institution: "Akademia Górniczo-Hutnicza (AGH)",
+    institution: "Warsaw Business School",
     degree: {
-      pl: "Mini MBA",
-      en: "Mini MBA",
+      pl: "MBA",
+      en: "MBA",
     },
     field: {
-      pl: "Zarządzanie projektami IT i innowacjami",
-      en: "IT Project Management and Innovation",
+      pl: "Master of Business Administration",
+      en: "Master of Business Administration",
     },
-    period: "2023 - 2024",
-    location: "Kraków",
+    period: "2024 - 2025",
+    location: "Warszawa",
     description: {
-      pl: "Program executive education skupiony na zarządzaniu projektami IT, przywództwie i innowacjach technologicznych",
-      en: "Executive education program focused on IT project management, leadership, and technological innovation",
+      pl: "Program MBA skupiony na przywództwie, strategii, zarządzaniu projektami i HR",
+      en: "MBA program focused on leadership, strategy, project management, and HR",
+    },
+    details: {
+      pl: ["180h programu", "Przywództwo", "Strategia", "Zarządzanie projektami", "HR"],
+      en: ["180h program", "Leadership", "Strategy", "Project Management", "HR"],
     },
   },
   {
-    institution: "Wyższa Szkoła Ekonomii i Informatyki w Krakowie",
+    institution: "WSEI Kraków",
     degree: {
-      pl: "Licencjat (Inżynier)",
-      en: "Bachelor's Degree (Engineer)",
+      pl: "Studia (nieukończone)",
+      en: "Studies (not finished)",
     },
     field: {
-      pl: "Informatyka",
-      en: "Computer Science",
+      pl: "Informatyka i Ekonometria",
+      en: "Computer Science & Econometrics",
     },
-    period: "2016 - 2020",
+    period: "2019 - 2023",
     location: "Kraków",
     description: {
-      pl: "Studia informatyczne z naciskiem na programowanie, bazy danych i inżynierię oprogramowania",
-      en: "Computer Science studies with focus on programming, databases, and software engineering",
+      pl: "Studia informatyczne z naciskiem na programowanie, matematykę i tworzenie gier",
+      en: "Computer Science studies with focus on programming, mathematics, and game development",
+    },
+    details: {
+      pl: ["Praca dyplomowa: 5. wymiar w grach", "C#", "Matematyka", "Game Dev"],
+      en: ["Thesis: 5th dimension in games", "C#", "Mathematics", "Game Dev"],
+    },
+  },
+  {
+    institution: "Technikum Informatyczne",
+    degree: {
+      pl: "Technik Informatyk",
+      en: "IT Technician",
+    },
+    field: {
+      pl: "Technik Informatyk",
+      en: "IT Technician",
+    },
+    period: "2015 - 2019",
+    location: "Myślenice",
+    description: {
+      pl: "Kwalifikacje zawodowe E12, E13, E14 w zakresie informatyki",
+      en: "Professional qualifications E12, E13, E14 in IT",
+    },
+    details: {
+      pl: ["Kwalifikacja E12", "Kwalifikacja E13", "Kwalifikacja E14"],
+      en: ["Qualification E12", "Qualification E13", "Qualification E14"],
     },
   },
 ];
@@ -63,23 +96,32 @@ export interface Certification {
 
 export const certifications: Certification[] = [
   {
-    name: "Microsoft Technology Associate: Database Fundamentals",
+    name: "MTA: Database Fundamentals (98-364)",
     issuer: "Microsoft",
     date: "2017",
+    credentialId: "wL8uY-FMLX",
   },
   {
-    name: "Microsoft Technology Associate: Software Development Fundamentals",
+    name: "MTA: HTML5 Application Development (98-375)",
     issuer: "Microsoft",
     date: "2017",
+    credentialId: "e3MX-4Tkj",
   },
   {
-    name: "Microsoft Technology Associate: Introduction to Programming using HTML and CSS",
+    name: "MTA: Software Development Fundamentals (98-361)",
     issuer: "Microsoft",
     date: "2017",
+    credentialId: "wy54W-4Smb",
   },
   {
-    name: "Frontend Developer",
-    issuer: "Coders Lab",
-    date: "2018",
+    name: "MTA: Security Fundamentals (98-367)",
+    issuer: "Microsoft",
+    date: "2017",
+    credentialId: "J26m-FVpD",
+  },
+  {
+    name: "Front-End Developer",
+    issuer: "Academy 108",
+    date: "2017",
   },
 ];

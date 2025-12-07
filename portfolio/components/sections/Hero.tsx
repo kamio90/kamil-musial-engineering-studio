@@ -1,18 +1,33 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import Link from "next/link";
 
 const socialLinks = [
   { name: "GitHub", url: "https://github.com/kamio90", icon: Github },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/kamil-musial-engineer/", icon: Linkedin },
-  { name: "Email", url: "mailto:contact@kamilmusial.dev", icon: Mail },
+  { name: "Email", url: "mailto:kmusial40@gmail.com", icon: Mail },
 ];
+
+const valueProps = {
+  pl: [
+    "Architektura systemów od 0 do milionów użytkowników",
+    "9+ lat w enterprise, fintech, energia, IoT",
+    "Nie szukam pracy — poluję na wpływ i autonomię",
+  ],
+  en: [
+    "Architecting systems from 0 to millions of users",
+    "9+ years across enterprise, fintech, energy, IoT",
+    "Not looking for a job—hunting impact & autonomy",
+  ],
+};
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale() as "pl" | "en";
+  const basePath = process.env.NODE_ENV === "production" ? "/kamil-musial-engineering-studio" : "";
 
   return (
     <section className="min-h-screen flex items-center justify-center relative pt-20">
@@ -31,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2"
           >
             <span className="gradient-text">{t("name")}</span>
           </motion.h1>
@@ -39,26 +54,55 @@ export default function Hero() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground mb-6"
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="text-xl md:text-2xl lg:text-3xl font-mono font-bold text-primary mb-2"
           >
-            {t("title")}
+            ENGINEERING STUDIO
           </motion.h2>
+
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg md:text-xl text-muted-foreground mb-2"
+          >
+            {t("title")} | System Designer | MBA
+          </motion.h3>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="text-base md:text-lg text-muted-foreground/80 italic mb-6"
           >
-            {t("subtitle")}
+            &ldquo;Innovating Tomorrow, Today&rdquo;
           </motion.p>
+
+          <motion.ul
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="space-y-2 mb-8"
+          >
+            {valueProps[locale].map((prop, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.4 + i * 0.1 }}
+                className="text-sm md:text-base text-muted-foreground flex items-center justify-center gap-2"
+              >
+                <span className="text-primary">▸</span>
+                {prop}
+              </motion.li>
+            ))}
+          </motion.ul>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
             <Link
               href="#projects"
@@ -67,17 +111,20 @@ export default function Hero() {
               {t("cta.primary")}
             </Link>
             <Link
-              href="#contact"
-              className="px-8 py-3 rounded-lg font-medium text-lg border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+              href={`${basePath}/cv.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-8 py-3 rounded-lg font-medium text-lg border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
             >
-              {t("cta.secondary")}
+              <Download className="w-5 h-5" />
+              {locale === "pl" ? "Pobierz CV" : "Download CV"}
             </Link>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
             className="flex items-center justify-center gap-4"
           >
             {socialLinks.map((link) => (
@@ -99,7 +146,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
+        transition={{ duration: 0.5, delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <Link

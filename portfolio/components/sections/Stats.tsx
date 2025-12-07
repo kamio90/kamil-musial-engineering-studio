@@ -1,72 +1,67 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { stats } from "@/lib/data/stats";
 
-const stats = [
-  { value: 9, suffix: "+", key: "yearsExperience" },
-  { value: 24, suffix: "+", key: "projectsDelivered" },
-  { value: 7, suffix: "", key: "companiesWorked" },
-  { value: 300, suffix: "%", key: "fasterSystem" },
-];
-
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
+function AnimatedCounter({ value, suffix }: { value: string; suffix?: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
+  const numericValue = parseFloat(value);
 
   useEffect(() => {
     if (isInView) {
       const duration = 2000;
       const steps = 60;
-      const stepValue = value / steps;
+      const stepValue = numericValue / steps;
       let current = 0;
 
       const timer = setInterval(() => {
         current += stepValue;
-        if (current >= value) {
-          setCount(value);
+        if (current >= numericValue) {
+          setCount(numericValue);
           clearInterval(timer);
         } else {
-          setCount(Math.floor(current));
+          setCount(Number(current.toFixed(value.includes(".") ? 2 : 0)));
         }
       }, duration / steps);
 
       return () => clearInterval(timer);
     }
-  }, [isInView, value]);
+  }, [isInView, numericValue, value]);
 
   return (
     <span ref={ref} className="gradient-text">
-      {count}
+      {value.includes(".") ? count.toFixed(2) : count}
       {suffix}
     </span>
   );
 }
 
 export default function Stats() {
-  const t = useTranslations("stats");
+  const locale = useLocale() as "pl" | "en";
 
   return (
     <section className="py-16 border-y border-border">
       <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {stats.map((stat, index) => (
             <motion.div
-              key={stat.key}
+              key={stat.label.en}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center glass rounded-xl p-4 card-hover"
             >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="text-sm md:text-base text-muted-foreground">
-                {t(stat.key)}
+              <p className="text-xs md:text-sm text-muted-foreground">
+                {stat.label[locale]}
               </p>
             </motion.div>
           ))}

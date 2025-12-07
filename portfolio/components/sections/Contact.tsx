@@ -25,7 +25,7 @@ export default function Contact() {
     {
       icon: MapPin,
       label: t("location"),
-      value: locale === "pl" ? "Kraków, Polska" : "Krakow, Poland",
+      value: locale === "pl" ? "Warszawa, Polska" : "Warsaw, Poland",
     },
     {
       icon: Clock,

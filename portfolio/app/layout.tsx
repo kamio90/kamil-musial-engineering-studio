@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "Node.js",
     "AWS",
     "Cloud Architecture",
-    "Kraków",
+    "Warsaw",
     "Poland",
     "Software Architect",
     "Tech Lead",

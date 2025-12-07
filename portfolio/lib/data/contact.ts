@@ -25,8 +25,8 @@ export const socialLinks: SocialLink[] = [
 export const contactInfo = {
   email: "kmusial40@gmail.com",
   location: {
-    pl: "Kraków, Polska",
-    en: "Krakow, Poland",
+    pl: "Warszawa, Polska",
+    en: "Warsaw, Poland",
   },
   availability: {
     pl: "Dostępny dla nowych projektów",

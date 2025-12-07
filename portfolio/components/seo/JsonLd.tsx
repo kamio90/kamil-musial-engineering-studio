@@ -20,7 +20,7 @@ export default function JsonLd() {
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Kraków",
+      addressLocality: "Warsaw",
       addressCountry: "Poland",
     },
     sameAs: [
@@ -74,7 +74,7 @@ export default function JsonLd() {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Kraków",
+      addressLocality: "Warsaw",
       addressCountry: "Poland",
     },
     founder: {

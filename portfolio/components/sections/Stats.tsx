@@ -47,7 +47,7 @@ export default function Stats() {
   return (
     <section className="py-16 border-y border-border">
       <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label.en}
@@ -55,12 +55,12 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center glass rounded-xl p-4 card-hover"
+              className="text-center glass rounded-xl p-4 card-hover flex flex-col justify-center min-h-[120px]"
             >
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 whitespace-nowrap">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="text-xs md:text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground leading-tight">
                 {stat.label[locale]}
               </p>
             </motion.div>

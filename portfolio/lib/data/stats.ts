@@ -33,7 +33,7 @@ export const stats: Stat[] = [
     suffix: "M+",
   },
   {
-    value: "99.99",
+    value: "99.9",
     label: {
       pl: "SLA Uptime",
       en: "SLA Uptime",
